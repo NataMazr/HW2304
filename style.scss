@@ -1,0 +1,73 @@
+.parent{
+    display: grid;
+    grid-template-columns: 200px 200px 200px 200px 200px 200px;
+    grid-template-rows: 200px 200px 200px 200px;
+    grid-template-areas: 
+    'f b b b b e'
+    'k b b b b i'
+    'j b b b b g'
+    'm m c c n n';
+    grid-gap: 10px;
+    margin: 0;
+    padding: 10px;
+    div{
+        border: 1px solid black;
+        &:nth-child(1){
+            grid-area: f;
+            background-color: rgb(127, 233, 198);
+        }
+        &:nth-child(2){
+            grid-area: b;
+            background-color: yellowgreen;
+        }
+        &:nth-child(3){
+            grid-area: e;
+            background-color: rgb(127, 233, 198);
+        }
+        &:nth-child(4){
+            grid-area: k;
+            background-color: rgb(127, 233, 198);
+        }
+        &:nth-child(5){
+            grid-area: i;
+            background-color: rgb(127, 233, 198);
+        }
+        &:nth-child(6){
+            grid-area: j;
+            background-color: rgb(127, 233, 198);
+        }
+        &:nth-child(7){
+            grid-area: g;
+            background-color: rgb(127, 233, 198);
+        }
+        &:nth-child(8){
+            grid-area: m;
+            background-color:rgb(248, 225, 15);
+        }
+        &:nth-child(9){
+            grid-area: c;
+            background-color:rgb(248, 225, 15);
+        }
+        &:nth-child(10){
+            grid-area: n;
+            background-color:rgb(248, 225, 15);
+        }
+    }   
+    @media (max-width: 480px){
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
+        grid-template-areas: 
+        'f e' 
+        'k i' 
+        'j g' 
+        'b b'
+        'b b'
+        'b b'
+        'b b' 
+        'b b'
+        'b b'
+        'm m'
+        'c c'
+        'n n';
+    }    
+}
